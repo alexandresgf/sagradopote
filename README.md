@@ -1,5 +1,5 @@
 # SantoPote
-Webapp for food-in-a-jar requests.
+Web/App for food-in-a-jar requests.
 
 * WebApp
 * Smartphone App
