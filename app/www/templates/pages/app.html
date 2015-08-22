@@ -1,0 +1,73 @@
+<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-nav-bar align-title="left" class="bar-energized" ng-controller="MenuTopCtrl">
+            <ion-nav-buttons side="left">
+                <button class="button button-clear" ng-click="leftMenu()">
+                    <i class="icon ion-ios-more"></i>
+                </button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-clear" ng-click="notify()">
+                    <i class="icon ion-ios-bell"></i>
+                </button>
+                <button class="button button-clear" ng-click="cart()">
+                    <i class="icon ion-ios-cart"></i>
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="appContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" ng-controller="MenuLeftCtrl">
+        <div class="list">
+            <a menu-close class="item item-thumbnail-left stable-bg" href="#/app/profile">
+                <img src="img/user_icon.png">
+                <h2 class="energized">{{user.name}}</h2>
+                <p>@{{user.singleton}}</p>
+            </a>
+            <a menu-close class="item item-content item-icon-left" href="#/pizzamaker">
+                <h2>
+                    <i class="icon ion-pizza"></i>
+                    Criar PIZZA!
+                </h2>
+            </a>
+            <a menu-close class="item item-icon-left" href="#/app/cart">
+                <h2>
+                    <i class="icon ion-ios-cart"></i>
+                    Carrinho
+                    <span class="badge badge-assertive">0</span>
+                </h2>
+            </a>
+            <a menu-close class="item item-icon-left" href="#/app/order">
+                <h2>
+                    <i class="icon ion-ios-list-outline"></i>
+                    Pedidos
+                </h2>
+            </a>
+            <a menu-close class="item item-icon-left" href="#/app/situation">
+                <h2>
+                    <i class="icon ion-ios-pulse-strong"></i>
+                    Situação do pedido
+                </h2>
+            </a>
+            <a menu-close class="item item-icon-left" href="#/app/notification">
+                <h2>
+                    <i class="icon ion-ios-bell"></i>
+                    Notificações
+                    <span class="badge badge-assertive">0</span>
+                </h2>
+            </a>
+            <a menu-close class="item item-icon-left" href="#/app/profile">
+                <h2>
+                    <i class="icon ion-ios-person"></i>
+                    Perfil
+                </h2>
+            </a>
+            <a menu-close class="item item-icon-left" href="#/signin">
+                <h2>
+                    <i class="icon ion-log-out"></i>
+                    Sair
+                </h2>
+            </a>
+        </div>
+    </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,56 @@
+<ion-view view-title="Perfil">
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider">
+                Informações do Usuário
+            </div>
+            <a class="item item-icon-left" ng-click="editName()">
+                <i class="icon ion-ios-person"></i>
+                Nome
+                <span class="item-note">{{user.name}}</span>
+            </a>
+            <a class="item item-icon-left" ng-click="editSingleton()">
+                <i class="icon ion-ios-at"></i>
+                Apelido
+                <span class="item-note">{{user.singleton}}</span>
+            </a>
+            <a class="item item-icon-left">
+                <i class="icon ion-iphone"></i>
+                Número celular
+                <span class="item-note">{{user.cellphone}}</span>
+            </a>
+            <a class="item item-icon-left" ng-click="editEmail()">
+                <i class="icon ion-ios-email"></i>
+                E-Mail
+                <span class="item-note">{{user.email}}</span>
+            </a>
+            <a class="item item-icon-left" ng-click="editPassword()">
+                <i class="icon ion-ios-locked"></i>
+                Senha
+            </a>
+            <div class="item item-divider">
+                Endereços cadastrados
+            </div>
+            <ion-list show-delete="shouldShowDelete">
+                <ion-item class="item item-avatar" collection-repeat="address in user.address">
+                    <ion-delete-button ng-if="$index == 0" class="ion-minus-circled" disabled></ion-delete-button>
+                    <ion-delete-button ng-if="$index > 0" class="ion-minus-circled" ng-click="remAddress($index)"></ion-delete-button>
+                    <img class="address-icon" src="img/address_icon.png">
+                    <h2 ng-click="editAddress($index)">{{address.street}}, {{address.number}}</h2>
+                    <p>{{address.comp}} - {{address.neighborhood}} - {{address.city}}/{{address.state}} - {{address.zip}}</p>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+    <nav mfb-menu
+         position="br"
+         effect="slidein-spring"
+         label="Opções"
+         active-icon="ion-close"
+         resting-icon="ion-plus"
+         toggling-method="click"
+         menu-state="fabMenu">
+        <button mfb-button icon="ion-location" label="Novo endereço" ng-click="addAddress()"></button>
+        <button mfb-button icon="ion-trash-a" label="Remover endereço" ng-click="showDelete()"></button>
+    </nav>
+</ion-view>

@@ -1,0 +1,42 @@
+<ion-header-bar align-title="center" class="bar-energized">
+    <h1 class="title">Cadastro inicial</h1>
+</ion-header-bar>
+<ion-view view-title="Cadastro inicial">
+    <ion-content padding="true">
+        <div class="row">
+            <div class="col">
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <input type="number" ng-model="addr.zip" ng-blur="checkCEP()" placeholder="Informe seu CEP">
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.street" placeholder="Rua" disabled>
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.comp" placeholder="Complemento">
+                    </label>
+                    <label class="item item-input">
+                        <input type="number" ng-model="addr.number" placeholder="Número">
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.neighborhood" placeholder="Bairro" disabled>
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.city" placeholder="Cidade" disabled>
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.state" placeholder="Estado" disabled>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button ng-click="prev()" class="button button-block button-assertive">Voltar</button>
+            </div>
+            <div class="col">
+                <button ng-click="finish()" class="button button-block button-positive">Concluir</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

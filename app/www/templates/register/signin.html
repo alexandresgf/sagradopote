@@ -1,0 +1,30 @@
+<ion-view view-title="Entrar">
+    <ion-content padding="true">
+        <div class="row">
+            <div class="col">
+                <h1 class="energized title-center">
+                    <i class="icon ion-pizza"></i>
+                    PizzaYOLO
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <input type="text" ng-model="user.cellphone" placeholder="Número celular (com DDD)">
+                    </label>
+                    <label class="item item-input">
+                        <input type="password" ng-model="user.password" placeholder="Senha">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button ng-click="signIn()" class="button button-block button-positive">Entrar</button>
+                <button ng-click="signUp()" class="button button-block button-assertive">Cadastre-se</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

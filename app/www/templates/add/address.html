@@ -1,0 +1,38 @@
+<ion-modal-view ng-controller="AddAddressCtrl">
+    <ion-header-bar align-title="center" class="bar-stable">
+        <h1 class="title">Novo endereço</h1>
+    </ion-header-bar>
+    <ion-content padding="true">
+        <div class="row">
+            <div class="col">
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <input type="number" ng-model="addr.zip" ng-blur="checkCEP()" placeholder="Informe seu CEP">
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.street" placeholder="Rua" disabled>
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.comp" placeholder="Complemento">
+                    </label>
+                    <label class="item item-input">
+                        <input type="number" ng-model="addr.number" placeholder="Número">
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.neighborhood" placeholder="Bairro" disabled>
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.city" placeholder="Cidade" disabled>
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" ng-model="addr.state" placeholder="Estado" disabled>
+                    </label>
+                </div>
+                <div class="list list-inset">
+                    <button ng-click="save()" class="button button-block button-positive">Concluir</button>
+                    <button ng-click="cancel()" class="button button-block button-assertive">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

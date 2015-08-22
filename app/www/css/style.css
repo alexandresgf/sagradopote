@@ -1,0 +1,11 @@
+/** Elements **/
+input { background-color: #fff !important; }
+
+/** Classes */
+.address-icon { border-radius: 0 !important; }
+.title-color { color: #FFC900 !important; }
+.title-center { text-align: center; }
+
+/** MODS */
+.item.item-input-inset > label > input { width: 100%; }
+.item.item-input-inset > label { background-color: #fff; }

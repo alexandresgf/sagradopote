@@ -1,0 +1,26 @@
+<ion-view view-title="Pedidos">
+    <ion-content padding="true">
+        <div class="row">
+            <div class="col">
+                <h4 ng-if="order_total == 0" class="title-center">Não existem pedidos realizados</h4>
+                <div class="card" ng-if="order_total > 0" ng-repeat="order in order_list">
+                    <a class="item item-avatar">
+                        <img src="img/pizza_icon.png">
+                        <h2>{{order.title}}</h2>
+                        <p>{{order.date}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <nav mfb-menu
+         position="br"
+         effect="slidein-spring"
+         label="Opções"
+         active-icon="ion-close"
+         resting-icon="ion-plus"
+         toggling-method="click"
+         menu-state="fabMenu">
+        <button mfb-button icon="ion-pizza" label="Novo pedido" ng-click="newOrder()"></button>
+    </nav>
+</ion-view>
